@@ -4,6 +4,9 @@ Adjust Salesforce profile or permissionset to another environment.
 ## Motivation
 We ran into problem when deploying profiles between environments. Especially in situation where target environment is lacking some components which are referenced in profile definition. Then you need to repeatedly try validation of changeset to remove all deployment errors (missing components) to move further.
 
+## Purpose
+This tool allows users to take complete definition of profile or permissionset from one sandbox and adjust it to another sandbox by removing missing component references.
+
 ## Usage
 When downloading complete profile definition from one environment, you need to ensure, that it contains all necessary components. I use [force-dev-tool](https://github.com/amtrack/force-dev-tool) with success for that purpose.
 
