@@ -45,14 +45,14 @@ $ SFProfileCheck src-int "Another Permission.permissionset"
 By default [force-dev-tool](https://github.com/amtrack/force-dev-tool) omits managed package components which is particularly undesirable in our situation as we are using managed components a lot.
 Ugly fix is to modify force-dev-tool behaviour by changing [force-dev-tool/lib/fetch-result-parser.js](https://github.com/amtrack/force-dev-tool/blob/master/lib/fetch-result-parser.js) in function FetchResultParser.prototype.getComponents = function(opts). There is a opts.filterManaged variable which controls filtering of managed packages components filtering. You to need to apply following change locally after installation of force-dev-tool.
 
-**Original:**
+Original:
 ```javascript
 FetchResultParser.prototype.getComponents = function(opts) {
 	var self = this;
 	opts = opts ? opts : {};
 	opts.filterManaged = opts.filterManaged !== undefined ? opts.filterManaged : true;
 ```
-**Target:**
+Target:
 ```javascript
 FetchResultParser.prototype.getComponents = function(opts) {
 	var self = this;
@@ -65,7 +65,7 @@ If you for some reason do not want to download all metadata, but just only a sub
 
 This metadata types are evaluated during profile/permissionset checking.
 
-**List of needed metadata types:**
+List of needed metadata types:
 - applications
 - classes
 - objects
