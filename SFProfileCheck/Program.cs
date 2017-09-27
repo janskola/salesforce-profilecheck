@@ -119,6 +119,8 @@ namespace SFProfileCheck
                         break;
                     case "label":
                         break;
+                    case "loginIpRanges":
+                        break;
                     default:
                         throw new Exception("Unknown element in Profile definition: " + eChild.Name);
                 }
