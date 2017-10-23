@@ -8,7 +8,7 @@ We ran into problem when deploying profiles between environments. Especially in 
 This tool allows users to take complete definition of profile or permissionset from one sandbox and adjust it to another sandbox by removing missing component references.
 
 ## Usage
-When downloading complete profile definition from one environment, you need to ensure, that it contains all necessary components. I use [force-dev-tool](https://github.com/amtrack/force-dev-tool) with success for that purpose.
+When downloading complete profile definition from one environment, you need to ensure, that it contains all necessary components. I use [force-dev-tool](https://github.com/amtrack/force-dev-tool) with success for that purpose, but be aware of wrong handling of managed components with default settings, see [Notes / Managed components handling by force-dev-tool](#managed-components-handling-by-force-dev-tool).
 
 ### Steps
 1. Prepare force-dev-tool environments with proper sandboxes ([documentation](https://github.com/amtrack/force-dev-tool#examples))
